@@ -32,7 +32,7 @@ sebenta-termo/
 ├── entropia.tex           # Definição de entropia, Balanço de entropia, Geração de Entropia, Processos isentrópicos,...
 ├── ciclos.tex             # Tipos de ciclos, Eficiência de Carnot, Ciclos de Carnot, Rankine, Brayton
 │
-└── README.md              # Este arquivo de instruções
+└── README.md
 ```
 
 ---
