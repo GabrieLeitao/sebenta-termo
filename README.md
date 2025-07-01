@@ -1,12 +1,12 @@
 # 📘 Sebenta de Termodinâmica
 
-Este texto enquadra-se na unidade curricular de Termodinâmica I de 2024/2025 de LEAer, LEAmb, LEMec, LEAN, no Instituto Superior Técnico. 
-
-Inspirada no livro *Fundamentals of Engineering Thermodynamics* (Shapiro) \cite{shapiro}, esta sebenta é complementada com conteúdos lecionados em aula, organizados de forma a facilitar uma aprendizagem mais eficaz ao longo do período letivo. Inclui ainda exemplos resolvidos e notas históricas que ajudam a tornar os conceitos mais intuitivos.
-
-Os ficheiros da sebenta estão disponíveis no repositório do [github.com/GabrieLeitao/sebenta-termo - GitHub](https://github.com/GabrieLeitao/sebenta-termo) para quem quiser contribuir com correções ou melhorias.
+Este texto enquadra-se na unidade curricular de Termodinâmica I de 2024/2025 de LEAer, LEAmb, LEMec, LEAN, no Instituto Superior Técnico.
 
 A termodinâmica é uma das disciplinas científicas mais fundamentais e abrangentes. O seu desenvolvimento ao longo dos séculos não apenas revolucionou a ciência, mas também transformou a tecnologia e a indústria, impulsionando a Revolução Industrial e moldando o mundo moderno.
+
+Inspirada no livro *Fundamentals of Engineering Thermodynamics* (Shapiro) \cite{shapiro}, esta sebenta integra também conteúdos lecionados em aula, organizados de forma a facilitar uma aprendizagem mais eficaz ao longo do período letivo. Inclui ainda exemplos resolvidos e notas históricas que acontribuem para uma compreensão mais intuitiva dos conceitos.
+
+Os ficheiros da sebenta estão disponíveis no repositório no Github: [github.com/GabrieLeitao/sebenta-termo](https://github.com/GabrieLeitao/sebenta-termo) para quem quiser contribuir com correções ou melhorias, assegurando a atualização e continuidade da sebenta.
 
 ---
 
