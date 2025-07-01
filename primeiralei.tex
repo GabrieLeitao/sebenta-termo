@@ -1,0 +1,199 @@
+
+\begin{theorem}[Lei Zero da Termodinâmica]
+    Quando dois objetos estão em equilíbrio térmico com um terceiro objeto, os dois estão em equilíbrio térmico entre si.
+\end{theorem}
+
+\section{Balanço de Energia}
+
+A partir das contribuições de Galileu e outros, Newton formulou as leis do movimento, fundamentais na mecânica.
+
+Considerando a força tangencial ao movimento e $\mathbf{v} = \frac{ds}{dt}$:
+
+\begin{eqnarray*}
+    F = m \frac{d\mathbf{v}}{dt} = m \frac{d\mathbf{v}}{ds} \frac{ds}{dt} = m \mathbf{v} \frac{d\mathbf{v}}{ds} \\
+    \int_{\mathbf{v}_1}^{\mathbf{v}_2} m \mathbf{v} \, d\mathbf{v} = \int_{s_1}^{s_2} F \, ds \\
+    \Delta E_c = \frac{1}{2} m \left( \mathbf{v}_2^2 - \mathbf{v}_1^2 \right) = \int_{s_1}^{s_2} F \, ds
+\end{eqnarray*}
+
+Ou seja, o trabalho de uma força ao longo da trajetória equivale à variação da energia cinética.
+
+Seja $R$ a força resultante exceto a gravítica, com $g$ constante:
+
+\begin{eqnarray*}
+    \frac{1}{2} m \left( \mathbf{v}_2^2 - \mathbf{v}_1^2 \right) = \int_{s_1}^{s_2} R \, ds - \int_{z_1}^{z_2} mg \, dz \\
+    \Delta E_p = mg(z_2 - z_1) \\
+    \int_{s_1}^{s_2} R \, ds = \Delta E_c + \Delta E_p
+\end{eqnarray*}
+
+As energias cinética e potencial são propriedades extensivas do sistema, com unidades de energia, iguais às do trabalho: em SI, sendo $W = \int \vec{F} \cdot d\vec{s}$, o trabalho tem unidades $\text{N} \cdot \text{m}$, que se denomina Joule, J.
+
+O \textbf{trabalho} é uma forma de transferir energia. O trabalho $W$ depende nos detalhes das interações a ocorrer entre um sistema e a vizinhança num determinado processo, pelo que o trabalho não é uma propriedade. O diferencial de trabalho, $\delta W$, é inexato: $\int_1^2 \delta W = W$. Por outro lado, o diferencial de uma propriedade é exato. Por exemplo, para o volume: $\int_{V_1}^{V_2} dV = V_2 - V_1$.
+
+A taxa com que dada transferência de energia ocorre, fruto de trabalho, denomina-se \textbf{potência}, $\dot{W}$, unidade SI é o Watt, W.
+
+\begin{eqnarray*}
+    \dot{W} = \frac{d}{dt} \int \vec{F} \cdot d\vec{s} = \vec{F} \cdot \vec{\mathbf{v}}\\
+    W = \int \dot{W} dt
+\end{eqnarray*}
+
+\subsection{Trabalho de Compressão/Expansão}
+
+Neste texto, convenciona-se que qualquer forma de energia que entra no sistema é positiva e energia que sai é negativa, \textbf{seguindo a convenção nas aulas, contrária à do Shapiro}.
+
+Considerando um sistema êmbolo-cilindro, a pressão do gás exerce uma força no pistão, durante a expansão. O trabalho feito pelo sistema quando o êmbolo se move é:  
+
+\begin{equation*}
+    \delta W = - F \, dx = - pA \, dx \implies \delta W = - p \,dV
+\end{equation*}
+
+Assim, o trabalho é dado por 
+
+\begin{equation}
+    W = - \int_{V_1}^{V_2} p \, dV
+\end{equation}
+
+Desta forma, tal como convencionado: durante uma expansão $dV > 0$ e $W < 0$, o sistema perde energia; enquanto numa compressão $dV < 0$ e $W > 0$, o sistema recebe energia.
+
+A equação do trabalho é válida para sistemas de qualquer forma, desde que a pressão seja uniforme ao longo da fronteira móvel.
+
+O módulo do trabalho corresponde à área sob a curva num diagrama $p$-$V$. Como diferentes processos entre os mesmos estados 1 e 2 podem gerar curvas distintas, o trabalho depende do processo realizado.
+
+\subsubsection{Processo Politrópico}
+
+Um processo de quase equilíbrio descrito por $pV^n = \text{const.}$ ou $pv^n = \text{const.}$, onde $n$ é uma constante, chama-se \textbf{processo politrópico}. 
+
+O trabalho para um processo politrópico, onde $c = p V^n = p_1 V_1^n = p_2 V_2^n$ e $p = \frac{c}{V^n}$, é:
+
+\begin{itemize}
+    \item Para $n \neq 1$:
+    \begin{equation*}
+        \begin{split}
+            W & = - \int_{V_1}^{V_2} \frac{c}{V^n} \, dV  = - \frac{c V_2^{1-n} - c V_1^{1-n}}{1-n} = \frac{(p_2 V_2^n) V_2^{1-n} - (p_1 V_1^n) V_1^{1-n}}{n - 1} \\
+            W & = \frac{p_2 V_2 - p_1 V_1}{n - 1}, \quad n \neq 1
+        \end{split}
+    \end{equation*}
+    \item Para $n = 1$:
+    \begin{equation*}
+        \begin{split}
+            W & = - \int_{V_1}^{V_2} \frac{c}{V} \, dV  = - c \ln \frac{V_2}{V_1} \\
+            W & = - p_1 V_1 \ln \frac{V_2}{V_1} = - p_2 V_2 \ln \frac{V_2}{V_1}, \quad n = 1
+        \end{split}
+    \end{equation*} 
+\end{itemize}
+
+Dado que $p_1V_1^n = p_2V_2^n$:
+
+\begin{eqnarray}
+    \frac{p_1}{p_2} = \left( \frac{V_2}{V_1} \right)^n \Longleftrightarrow 
+    \ln \left( \frac{V_2}{V_1} \right)^n = \ln \frac{p_1}{p_2} \Longleftrightarrow 
+    n \ln \frac{V_2}{V_1} = \ln \frac{p_1}{p_2} \implies
+    n = \frac{\ln \frac{p_1}{p_2}}{\ln \frac{V_2}{V_1}}
+\end{eqnarray}
+
+\subsection{Energia Interna}
+
+A variação da energia total de um sistema é calculada com base em três grandes contribuições: energia cinética, energia potencial -- associadas ao movimento e posição do sistema --, e \textbf{energia interna}, $U$, onde estão concentradas as outras contribuições. Todas estas energias são propriedades extensivas.
+\begin{equation}
+    \Delta E = \Delta U + \Delta E_c + \Delta E_p 
+\end{equation}
+
+Microscopicamente, a energia interna inclui: energia cinética translacional, rotacional e vibracional das moléculas; energia das ligações químicas; energia atómica (orbitais, spin) e nuclear. Em substâncias condensadas, as forças intermoleculares também contribuem significativamente para $U$.
+
+\subsection{Calor}
+
+Da mesma forma que o trabalho, o \textbf{calor} não é uma propriedade, pois depende do processo. $Q = \int_1^2 \delta Q$.
+A taxa de transferência de energia por calor pode ser dada por:
+
+\begin{equation*}
+    \dot{Q} = \int_A \dot{q} \, dA
+\end{equation*}
+
+onde $\dot{q}$ é o fluxo de calor por unidade de área.
+
+A transferência de calor pode ser por \textbf{condução} ou \textbf{radiação}, e uma combinação que produz a \textbf{convecção}.
+
+\subsubsection{Condução}
+
+A condução é a transferência de energia de moléculas mais energéticas de uma substância para partículas adjacentes.
+
+A Lei de Fourier permite calcular a taxa de transferência de energia por condução:
+
+\begin{equation}
+    \dot{Q}_x = - \kappa A \frac{dT}{dx}, \quad \dot{\vec{Q}} = - \kappa A \nabla T
+\end{equation}
+
+onde $\kappa$ é uma constante chamada condutividade térmica. O sinal negativo reflete o facto da transferência ocorrer na direção de menor temperatura.
+
+\subsubsection{Radiação}
+
+A radiação transmite energia por ondas eletromagnéticas, fotões. Ao contrário da condução, a radiação pode transferir energia no vácuo.
+
+A taxa de transferência de energia por radiação pode ser calculada por uma forma modificada da Lei de Stefan-Boltzmann:
+
+\begin{equation}
+    \dot{Q}_e = \epsilon \sigma A T^4
+\end{equation}
+
+onde $T$ é a temperatura da superfície, $\epsilon$ é a emissividade da superfície ($0 \leq \epsilon \leq 1$), e $\sigma = 5.67 \cdot 10^{-8} \; \text{W}/\text{m}^2 \cdot \text{K}^4$.
+
+A emissividade $\epsilon$ é uma grandeza adimensional que quantifica a capacidade de uma superfície emitir radiação térmica em comparação com um corpo negro ideal ($\epsilon = 1$). Superfícies metálicas polidas, por serem altamente refletoras, têm baixa emissividade, enquanto superfícies negras ou rugosas apresentam valores próximos de $1$.
+
+A emissividade depende do material, do estado da superfície, da temperatura e do comprimento de onda. Em muitos casos, utiliza-se uma emissividade média ou espetral para simplificação.
+
+
+\subsubsection{Convecção}
+
+A lei de arrefecimento de Newton dá-nos uma expressão experimental para calcular a transferência de energia por convecção de uma superfície sólida à temperatura de $T_b$ e um gás ou líquido adjacente a $T_f$.
+\begin{equation}
+    \dot{Q}_c = h A (T_b - T_f), \quad \dot{Q} = h A \Delta T
+\end{equation}
+
+onde $h$ é um coeficiente de transferência de calor, determinado experimentalmente, que depende do fluido, da geometria, da rugosidade da superfície e das condições de escoamento (como velocidade e regime laminar ou turbulento).
+
+
+\subsection{Primeira Lei da Termodinâmica}
+
+Joule demonstrou experimentalmente que a energia é conservada, i.e. a energia não pode ser criada ou destruída, apenas convertida. Isto é considerado a Primeira Lei da Termodinâmica.
+
+Para um sistema fechado, Joule deduziu que o trabalho em qualquer processo adiabático entre dois estados de equilíbrio é o mesmo. Como depende apenas dos estados inicial e final, por definição de propriedade, esse trabalho corresponde à variação de uma propriedade do sistema, a energia, i.e., \(\Delta E = W_{\text{adia}}\).
+
+Do \textbf{balanço de energia} geral resulta:
+
+\begin{equation}
+    \Delta E = \Delta E_c + \Delta E_p + \Delta U = Q + W
+\end{equation}
+
+Na forma diferencial:
+
+\begin{equation}
+    dE = \delta Q + \delta W, \qquad \frac{dE}{dt} = \frac{dE_c}{dt} + \frac{dE_p}{dt} + \frac{dU}{dt} = \dot{Q} + \dot{W}
+\end{equation}
+
+Recorrentemente, as energias cinéticas e potenciais macroscópicas do sistema são desprezáveis:
+
+\begin{equation}
+    \Delta U = Q + W, \qquad \frac{dU}{dt} = \dot{Q} + \dot{W}
+\end{equation}
+
+
+\section{Volumes de Controlo}
+
+Para sistemas com fluxo de massa, existe transferência de energia associado ao trabalho do fluxo volumétrico que entra ou sai:
+
+\begin{equation*}
+    \frac{dE}{dt} = \vec{F} \cdot \vec{\mathbf{v}} = p A \mathbf{v} = p A \frac{dx}{dt} = p \frac{dV}{dt} = p \frac{v dm}{dt} = \dot{m} pv 
+\end{equation*}
+
+e o balanço energético para o volume de controlo é:
+
+\begin{equation}
+    \frac{dE}{dt} = \frac{dU}{dt} + \frac{dE_c}{dt} + \frac{dE_p}{dt} = \dot{Q} + \dot{W} + \sum_i \dot{m} \left( \frac{1}{2}\mathbf{v}_i^2 + gz_i + u_i + p_i v_i \right)
+\end{equation}
+
+Deste modo, define-se a \textbf{entalpia} como $h = u + pv$, uma grandeza útil para o estudo. Desprezando termos cinéticos e potenciais:
+
+\begin{equation}
+    \frac{dU}{dt} = \dot{Q} + \dot{W} + \sum_i \dot{m} h_i
+\end{equation}
+
+Muitas vezes a entalpia é muito maior comparativamente aos termos de energia cinética e potencial associada ao fluxo de massa que passa a fronteira do sistema ($h_i \gg \frac{1}{2}\mathbf{v}_i^2 + gz_i$), sendo, por isso, desprezáveis.
