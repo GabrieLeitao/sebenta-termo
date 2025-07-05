@@ -211,6 +211,10 @@ Como $c_p > c_v$, $k>1$. Combinando \ref{eq:relacao-cpcv} e \ref{eq:razao-cpcv},
     c_v(T) = \frac{R}{k -1}
 \end{eqnarray}
 
+\textbf{Nota:} Lembrando que a constante aqui é a de cada gás $R$, e depende da sua massa molar $M$: $R = \frac{\mathcal{R}}{M}$.
+
+\textbf{Gás Perfeito} é uma idealização adicional do gás ideal, onde se despreza as forças intermoleculares, pelo que $c_v$ e $c_p$ são \textbf{constantes} e não função da temperatura.
+
 \subsection{Processos Politrópicos}
 
 Para um processo politrópico $pV^n = \text{const.}$, obtemos novas expressões para o trabalho, dado que $pV = mRT$:
@@ -254,7 +258,7 @@ Para um líquido incompressível, como a água: $v \approx \text{const}$. Sendo 
 
 $dh = du + d(pv) = c_v dT + v dp$. O termo $v dp$ é normalmente desprezável, pois $v dp \ll c_v dT$. Por outro lado, $c_p = \frac{\partial h}{\partial T} \bigr|_{p} = \frac{\partial u}{\partial T}\bigr|_{p} + v \cancelto{0}{\frac{\partial p}{\partial T}\bigr|_{p}} = c_v$, pois a pressão é fixa.
 
-Logo, para a água existe apenas um calor específico: $c = c_p = c_v = 4.816 \frac{\text{kJ}}{\text{kg K}} $.
+Logo, para a água líquida na prática usa-se apenas um calor específico por aproximação: $c = c_p \approx c_v = 4.186 \frac{\text{kJ}}{\text{kg K}} $.
 
 Tendo em conta a aproximação:
 
@@ -263,5 +267,5 @@ Tendo em conta a aproximação:
 \end{equation}
 
 
-Como $h_f(T) = u_f(T) + p_{sat}(T)$, temos que $h(T, P) \approx h_f(T) + v_f(T) (p - p_{sat}(T))$. Podemos ainda aproximar por: $h(T,p) \approx h_f(T)$, quando a contribuição do termo da direito é pequeno.
+Como $h_f(T) = u_f(T) + p_{sat}(T) v_f(T)$, temos que $h(T, p) \approx h_f(T) + v_f(T) (p - p_{sat}(T))$. Podemos ainda aproximar por: $h(T,p) \approx h_f(T)$, quando a contribuição do termo da direito é pequeno.
 
