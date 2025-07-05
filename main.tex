@@ -1,0 +1,286 @@
+\documentclass[a4paper,12pt, openany]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{color}
+% \usepackage{anysize} 
+%     \marginsize{2cm}{2cm}{2cm}{2cm}
+\usepackage[a4paper, top=3cm, bottom=2.5cm, left=2cm, right=2cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{setspace}
+
+\usepackage{cancel}
+\usepackage{textcomp}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{wrapfig}
+\usepackage{multicol}
+
+
+\usepackage[most]{tcolorbox} % For the example box
+\tcbuselibrary{theorems}
+\newcounter{example}[chapter]
+
+\newtcolorbox[use counter=example]{examplebox}[1][]{
+  colback=blue!5!white,       % Light blue background
+  colframe=blue!40!black,     % Darker blue frame
+  opacityframe=0.8,
+  fonttitle=\bfseries,
+  title={Exemplo \thechapter.\arabic{example}: #1},
+  label={ex:#1},
+  before skip=10pt,
+  after skip=10pt,
+  breakable,
+  enhanced
+}
+  
+\newcounter{history}[chapter]
+
+\newtcolorbox[use counter=history]{historybox}[1][]{
+  colback=red!5!white,       % Light blue background
+  colframe=red!40!black,         % Moldura vermelha escura
+  opacityframe=0.8,
+  fonttitle=\bfseries,
+  title={Nota histórica \thechapter.\arabic{history}: #1},
+  label={hb:#1},
+  before skip=10pt,
+  after skip=10pt,
+  breakable,
+  enhanced
+}
+
+\newtheoremstyle{mystyle}% custom style name
+{10pt}   % Space above
+{10pt}   % Space below
+{\itshape}  % Body font
+{}       % Indent amount
+{\bfseries} % Theorem head font
+{.}      % Punctuation after theorem head
+{.5em}   % Space after theorem head
+{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}}
+
+
+\theoremstyle{mystyle}
+\newtheorem{theorem}{Enunciado}[chapter]
+
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{-20pt}{40pt}
+
+% \setlength{\headheight}{16pt}
+% \fancyhf{}
+% \fancyhead[LE]{\textit{\leftmark}}
+% \fancyhead[RO]{\textit{\rightmark}}
+% \fancyfoot[C]{\thepage}
+% \pagestyle{fancy}
+
+
+\newcommand{\eqn}[2]{
+    \textbf{#1}
+    \begin{flalign*}
+        #2
+    \end{flalign*}
+}
+
+
+\title{Termodinâmica I}
+\author{Gabriel Leitão}
+\date{\today}
+
+\begin{document}
+
+\frontmatter
+\begin{titlepage}
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/ist.jpg} % Opcional
+    \vspace{2cm}
+
+    {\Huge \bfseries Termodinâmica I\par}
+    \vspace{1.5cm}
+    {\Large \textit{Sebenta para Engenharia}\par}
+    \vfill
+
+    {\Large Gabriel Leitão\par}
+    \vspace{0.5cm}
+    {\large Instituto Superior Técnico\par}
+    \vspace{0.5cm}
+    {\large Junho 2025\par}
+\end{titlepage}
+
+
+\chapter*{Resumo}
+Este texto enquadra-se na unidade curricular de Termodinâmica I de 2024/2025 de LEAer, LEAmb, LEMec, LEAN, no Instituto Superior Técnico. 
+
+A termodinâmica é uma das disciplinas científicas mais fundamentais e abrangentes. O seu desenvolvimento ao longo dos séculos não apenas revolucionou a ciência, mas também transformou a tecnologia e a indústria, impulsionando a Revolução Industrial e moldando o mundo moderno.
+
+Inspirada no livro \emph{Fundamentals of Engineering Thermodynamics} (Shapiro) \cite{shapiro}, esta sebenta integra também conteúdos lecionados em aula, organizados de forma a facilitar uma aprendizagem mais eficaz ao longo do período letivo. Inclui ainda exemplos resolvidos e notas históricas que contribuem para uma compreensão mais intuitiva dos conceitos.
+
+Os ficheiros da sebenta estão disponíveis num repositório no GitHub: \url{https://github.com/GabrieLeitao/sebenta-termo} para quem quiser contribuir com correções ou melhorias, assegurando a atualização e continuidade da sebenta.
+
+
+\vspace{1cm}
+Revisão: Gabriel Faria
+\vspace{1cm}
+
+20 de Junho de 2025
+
+\tableofcontents
+
+\mainmatter
+
+
+\chapter{Introdução à Mecânica dos Fluidos}
+\input{fluidos.tex}
+
+\chapter{Introdução}
+\input{intro.tex}
+
+\chapter{Primeira Lei da Termodinâmica}
+\input{primeiralei.tex}
+
+\chapter{Propriedades}
+\input{propriedades.tex}
+
+\chapter{Segunda Lei da Termodinâmica}
+\input{segundalei.tex}
+
+\chapter{Entropia}
+\input{entropia.tex}
+
+\chapter{Ciclos}
+\input{ciclos.tex}
+
+
+\newgeometry{left=0.5cm, right=1cm, top=0.5cm, bottom=1cm}
+\appendix
+% \let\cleardoublepage\clearpage
+\clearpage
+\chapter*{}
+\vspace*{-5em} % ajusta conforme o quanto de espaço quer remover
+\thispagestyle{empty}
+\addcontentsline{toc}{chapter}{Formulário}
+
+
+\setlength{\columnseprule}{0.5pt}
+\def\columnseprulecolor{\color{black}}
+\setlength{\columnsep}{1cm}
+
+\setlength{\parindent}{0pt}
+
+\centerline{\Large\textbf{Formulário de Termodinâmica I}}
+\footnotesize
+
+\begin{multicols}{2}
+
+\eqn{Constantes}{
+&\mathcal{R} = 8.314~\text{kJ/kmol·K} \qquad
+N_A = 6.022 \times 10^{23} \qquad R_0 = \frac{\mathcal{R}}{M}\\
+&R_{ar} = \frac{\mathcal{R}}{28.97} = 0.287~\text{kJ/kg} \qquad
+c_{agua} = 4.186 \ \text{kJ/kg·K} \\
+&n = \frac{m}{M} \qquad F = pA \qquad p = p_{atm} + \rho g L \qquad F = \rho g V \\
+&\Dot{Q}=kA \nabla T \qquad \Dot{Q}=hA \Delta T \qquad \Dot{Q}=\epsilon \sigma A T^4\\
+& h=u+pv \qquad W = - \int p dV \qquad \Dot{W}=Fv \qquad \Dot{m} = pAv
+}
+
+\eqn{Conversões}{
+&1 \text{ atm} = 101325 \ \text{Pa} = 760 \text{ mmHg}
+\qquad 1 \text{ cal} = 4.186 \ \text{J} \\
+&1 \text{ Pa} = 1 \text{ N/}\text{m}^2 \qquad
+1 \text{ bar} = 10^5 \text{ Pa} \qquad 1 \text{ MPa} = 10 \text{ bar}\\
+& T(\text{\textdegree C}) = T(\text{K}) - 273.15 \qquad
+T(\text{\textdegree R}) = 1.8 \, T(\text{K}) \\
+& T(\text{\textdegree F}) = T(\text{\textdegree R}) - 459.67 \qquad
+T(\text{\textdegree F}) = 1.8 \, T(\text{\textdegree C}) + 32
+}
+
+\eqn{Balanço de Energia}{
+&\Delta E = \Delta E_c + \Delta E_p + \Delta U = Q+W \qquad \frac{dE}{dt} = \Dot{Q} + \Dot{W}\\
+&\text{Sistema aberto}:\\
+&\frac{dE}{dt} = \Dot{Q} + \Dot{W} + \sum_i \Dot{m_i} \left(\frac{1}{2}v_i^2+gz_i+h_i\right)
+}
+
+\eqn{Processo Politrópico}{
+&pV^n = pv^n = \text{const} \qquad n = \frac{\ln (p_2 / p_1)}{\ln (V_1 / V_2)} \\
+& W= \frac{p_2V_2 - p_1 V_1}{n-1},\ n\neq 1 \qquad W = - p_1 V_1 \ln \frac{V_2}{V_1},\ n=1\\
+& n=0 \implies p = \text{const.} \qquad n=\infty \implies v=\text{const.} \\
+&\frac{T_2}{T_1} = \left( \frac{p_2}{p_1} \right)^{(n-1)/n} = \left( \frac{v_1}{v_2} \right)^{n-1}
+}
+
+
+\eqn{Modelo Gás Ideal}{
+&u= u(T) \quad h(T)=u(T)+ RT \quad du = c_p(T) dT \quad dh = c_p(T) dT \\
+&c_p =c_v +R \qquad k = \frac{c_p}{c_v} \qquad c_p = \frac{kR}{k-1} \qquad c_v=\frac{R}{k-1}\\
+&W = \frac{mR(T_2-T_1)}{n-1},\ n\neq 1 \qquad W = -mRT \ln \frac{V_2}{V_1},\ n=1 \\
+&n=1 \Longleftrightarrow \text{isotérmico} \qquad n = k = \frac{c_p}{c_v} \Longleftrightarrow \text{isentrópico} \\
+& pv=RT \qquad pV = mRT \qquad pV = n \mathcal{R}T
+}
+
+\eqn{Líquidos}{
+&v \approx \text{cte.} \quad \Delta U=mc\Delta T \quad du=dh=c dT \qquad v(T,p) \approx v_f(T) \\
+&h(T, P) \approx h_f(T) + v_f(T) (p - p_{sat}(T)) \\
+& v = (1-x) v_f + x v_g = v_f + x(v_g - v_f) \qquad \text{Título:} \ x = \frac{m_{vap}}{m} \\
+&x = \frac{v-v_f}{v_g-v_f} \qquad y = y_0 + (y_1-y_0) \frac{x-x_0}{x_1-x_0}
+}
+
+\eqn{Balanço de Entropia}{
+&\Delta S = \int \frac{\delta Q}{T} + \sigma \qquad \frac{dS}{dt} = \int \frac{\Dot{q}}{T} + \sum_i \Dot{m}_i s_i + \Dot{\sigma}\\
+&du =Tds -pdv \qquad dh = Tds + vdp \qquad \Delta s = \Delta s^0 - R\ln \frac{p_2}{p_1}
+}
+
+\eqn{Trabalho Internalmente Reversível - Sistema Aberto}{
+&\left( \frac{\dot{W}}{\dot{m}} \right)_{\substack{\text{int} \\ \text{rev}}} = \int_1^2 v dp \qquad \left( \frac{\dot{W}}{\dot{m}} \right)_{\substack{\text{int} \\ \text{rev}}} = \frac{n}{n-1} \left(p_2 v_2 - p_1 v_1\right), \ n \neq 1\\
+&\left( \frac{\dot{W}}{\dot{m}} \right)_{\substack{\text{int} \\ \text{rev}}} = p_1 v_1 \ln \frac{p_2}{p_1} = p_2 v_2 \ln \frac{p_2}{p_1}, \ n = 1\\
+&\text{Gás Ideal:}\\
+&\left( \frac{\dot{W}}{\dot{m}} \right)_{\substack{\text{int} \\ \text{rev}}} = \frac{n R}{n-1} \left(T_2 - T_1\right), \ n \neq 1 \; \left( \frac{\dot{W}}{\dot{m}} \right)_{\substack{\text{int} \\ \text{rev}}} = RT \ln \frac{p_2}{p_1}, \ n = 1 \\
+&\left( \frac{\dot{W}}{\dot{m}} \right)_{\substack{\text{int} \\ \text{rev}}} = \frac{n R}{n-1} T_1 \left[  \left( \frac{p_2}{p_1} \right)^{(n-1)/n} - 1 \right], \ n \neq 1 
+}
+
+\eqn{Variação de Entropia}{
+&\Delta s = c_v \ln \frac{T_2}{T_1} + R \ln \frac{v_2}{v_1} \qquad \Delta s = c_p \ln \frac{T_2}{T_1} - R \ln \frac{p_2}{p_1} \\
+&\Delta s = c_v \ln \frac{p_2}{p_1} + c_p \ln \frac{v_2}{v_1} \qquad \text{Líquido incompressível:}\ \Delta s=c \ln \frac{T_2}{T_1}
+}
+
+\eqn{Processos Isentrópicos}{
+&s^0(T_2) = s^0(T_1) + R \ln \frac{p_2}{p_1} \\
+&\text{Ar:} \ \frac{p_2}{p_1} = \frac{p_{r2}}{p_{r1}} \qquad \frac{v_2}{v_1} = \frac{v_{r2}}{v_{r1}} 
+}
+
+\eqn{Ciclos}{
+&\text{Condensador e Caldeira - isotérmicos}\\
+&\text{Turbina e compressor - abiabáticos}\\
+&\eta =\frac{W_u}{Q_H} =  \frac{Q_H- Q_C}{Q_H} = 1 - \frac{Q_C}{Q_H} = 1 - \frac{T_C}{T_H}\\
+&\text{COP}_{\text{frig.}} = \beta = \frac{Q_C}{W_{ciclo}} = \frac{Q_C}{Q_H - Q_C} \qquad \beta = \frac{1}{\eta} - 1 \\
+&\text{COP}_{\text{bomba}} = \gamma = \frac{Q_H}{W_{ciclo}} = \frac{Q_H}{Q_H - Q_C} \qquad \gamma = \frac{1}{\eta}\\
+&\text{bwr} = \frac{\Dot{W}_c / \Dot{m}}{\Dot{W}_t / \Dot{m}} \qquad \text{Válvulas:} \ \Delta h \approx 0, \; \Delta p \propto L
+}
+
+\eqn{Ciclo de Brayton}{
+&\eta=1 - \frac{h_4 - h_1}{h_3 - h_2} \qquad \eta_{max} = 1 - \frac{T_1}{T_{2s}} = 1 - \left(\frac{1}{r_p}\right)^{(k-1)/k}\\
+&T_{2s} = T_1 \left( \frac{p_2}{p_1} \right)^{(k-1)/k} = T_1 \left( r_p \right)^{(k-1)/k} \\
+&T_{4s} = T_3 \left( \frac{p_4}{p_3} \right)^{(k-1)/k} = T_3 \left( \frac{1}{r_p} \right)^{(k-1)/k}\\
+&\eta_t = \frac{h_4-h_3}{h_{4s}-h_3} = \frac{(\dot{W}_t/\dot{m})}{(\dot{W}_t/\dot{m})_s} \qquad \eta_c = \frac{(\dot{W}_c/\dot{m})_s}{(\dot{W}_c/\dot{m})} = \frac{h_{2s}-h_1}{h_2-h_1}\\
+&T_4 = T_3 + \eta_t (T_{4s}-T_3) \qquad T_2 = T_1 + \frac{T_{2s}-T_1}{\eta_c}\\
+&\Dot{W}_u \ \text{máximo}: \ r_p = \sqrt{r_{p_{max}}} \\
+&\text{Intercooling:} \ p_{int}=\sqrt{p_1 p_2}
+}
+
+\end{multicols}
+
+\normalsize
+\restoregeometry
+
+\backmatter
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliografia}
+\begin{thebibliography}{9}
+\bibitem{shapiro}
+Michael J. Moran and Howard N. Shapiro and Daisie D. Boettner and Margaret B. Bailey (2022), \emph{Fundamentals of Enginnering Thermodynamics - 9th Edition}, Wiley
+
+\end{thebibliography}
+
+\end{document}

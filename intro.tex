@@ -1,0 +1,65 @@
+\section{Conceitos e Definições}
+
+O \textbf{sistema} identifica o objeto de estudo de uma análise termodinâmica. Um sistema pode ser \textbf{aberto}, \textbf{fechado} ou \textbf{isolado}. Um sistema fechado refere-se a uma quantidade de matéria fixa, enquanto um sistema aberto, ou volume de controlo, é uma região do espaço pelo qual pode haver transferências de massa pela fronteira. Em ambos, pode haver transferência de energia. Num sistema isolado, não há interação com a vizinhança. Sistemas isolados não ocorrem naturalmente.
+
+A fronteira de um sistema pode ser: \textbf{adiabática}, quando não permite trocas de calor (\textbf{diatérmico}, caso contrário); \textbf{rígida}, quando não permite execução de trabalho, ou \textbf{móvel}, caso contrário. Aquilo que está para além da fronteira, é considerada a \textbf{vizinhança}.
+
+Uma \textbf{propriedade} é uma grandeza macroscópica do sistema num dado instante, cujo valor pode ser determinado independentemente da história anterior do sistema.
+
+Um \textbf{estado} é a condição do sistema descrita pelas suas propriedades. O estado de um sistema pode ser determinado por um subconjunto mínimo das suas propriedades, a partir do qual as restantes podem ser determinadas. Por exemplo, para gases ideais, basta 2 propriedades independentes para definir o estado do sistema.
+
+Diz-se que ocorreu um \textbf{processo}, quando uma ou mais propriedades variam, e consequentemente muda o estado do sistema. 
+
+\begin{quote}
+    ``Uma quantidade é uma propriedade se e só se a sua variação entre dois estados é independente do processo.''
+\end{quote}
+
+
+Num \textbf{estado estacionário} as propriedades não variam com o tempo. Um \textbf{estado de equilíbrio} implica que não ocorram processos espontâneos que façam o sistema mudar de estado. Um sistema que, ao ser isolado, não sofre quaisquer alterações, implica que estava em equilíbrio quando foi isolado.
+
+Um processo pode ser: \textbf{isotérmico}, se ocorre a temperatura constante; \textbf{isobárico}, se ocorre a pressão constante; e \textbf{isocórico}, se ocorre a volume constante.
+
+As propriedades podem ser \textbf{extensivas} se dependem do tamanho do sistema, como a massa, o volume, a energia, e a entropia. O valor de uma propriedade extensiva de um sistema é igual à soma do valor da propriedade de todas as partes que compõem o sistema, ou seja, são funções do tempo. Por outro lado, as propriedades que são função do tempo e do espaço, como a pressão, a temperatura e o volume específico, denominam-se propriedades \textbf{intensivas}. Por exemplo, a massa de um conjunto de peças é igual à soma das massas de cada peça individualmente, mas a temperatura do conjunto não é a soma das temperaturas de cada peça.
+
+Entre dois sistemas podem existir transferências de energia, que resultam de \textbf{calor} ou \textbf{trabalho}. O calor e o trabalho não são funções contínuas, mas apenas podem ser quantificados como a energia total transferida dessa forma entre dois estados, devido a um dado processo.
+
+Um \textbf{reservatório térmico}, ou apenas reservatório, é um sistema que se mantém a temperatura constante, mesmo que receba ou ceda energia por calor. Deste modo, um reservatório é uma idealização de corpos grandes, como a atmosfera, grandes corpos de água (lagos, oceanos), ou sistema de duas fases a pressão constante. Propriedades extensivas como a energia interna podem variar.
+
+Um \textbf{ciclo} é uma sequência de processos que começa e acaba no mesmo estado. Desta forma, no final de um ciclo ideal, todas as propriedades do sistema retornarão ao valor inicial.
+
+\subsection{Propriedades}
+
+Quando as substâncias são um contínuo, pode-se falar de propriedades intensivas num ponto. Por exemplo, a \textbf{densidade} $\rho$ em cada ponto pode ser definida:
+
+\begin{equation}
+    \rho = \lim_{V \to V'} \frac{m}{V}
+\end{equation}
+
+onde $V'$ é o menor volume para o qual existem partículas suficientes para médias estatísticas, e para o qual a matéria pode ser considerado um contínuo. 
+
+A densidade é, portanto, uma propriedade intensiva que pode variar de ponto para ponto. O \textbf{volume específico} é o inverso da densidade, $v = \frac{1}{\rho}$, que igualmente, depende da posição e é uma propriedade intensiva. As unidades SI são $\text{m}^3 / \text{kg}$.
+
+A massa pode ser determinada por integração, sabendo $\rho$. Quando a densidade é uniforme, então $m = \rho V$.
+
+\begin{equation}
+    m = \int_{V} \rho \, dV
+\end{equation}
+
+Considerando uma área pequena \( A \) num ponto de um fluido em repouso, o fluido exerce sobre essa área uma força compressiva \( F \), normal a \( A \). Pelo princípio da ação e reação, do outro lado da área o fluido exerce uma força igual e oposta, mantendo o equilíbrio estático.
+A \textbf{pressão} nesse ponto é definida como:
+
+\begin{equation}
+    p = \lim_{A \to A'} \frac{F}{A}
+\end{equation}
+
+onde $A'$ tem o mesmo significado de ponto limite usado na definição de densidade, e $F$ a força normal a essa área.
+
+\subsubsection{Conversão de unidades de pressão}
+
+\begin{eqnarray*}
+    1 \; \text{Pa} = 1 \; \text{N}/\text{m}^2       \\
+    1 \; \text{kPa} = 10^3 \; \text{N}/\text{m}^2   \\
+    1 \; \text{bar} = 10^5 \; \text{N}/\text{m}^2   \\
+    1 \; \text{atm} = 101325 \; \text{N}/\text{m}^2 \\
+    1 \; \text{MPa} = 10^6 \; \text{N}/\text{m}^2   
+\end{eqnarray*}

@@ -1,0 +1,3 @@
+graphs/venv/
+graphs/*.pdf
+graphs/**/*.pdf

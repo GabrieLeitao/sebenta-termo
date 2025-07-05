@@ -1,0 +1,241 @@
+A mecânica dos fluidos é o ramo da física que estuda o comportamento de fluidos em repouso ou em movimento. Neste capítulo, é feita uma introdução dos conceitos fundamentais que serão úteis.
+
+\section{Definição de fluido}
+
+Um fluido é uma substância que se deforma continuamente quando sujeita a uma tensão de cisalhamento, por menor que ela seja. Ao contrário dos sólidos, que mantêm uma forma rígida, os fluidos não possuem forma própria e adaptam-se completamente ao recipiente que os contém.
+
+Os fluidos podem ser classificados em \textbf{Líquidos} e \textbf{Gases}. Gases são compressíveis, enquanto os líquidos são geralmente considerados incompressíveis.
+
+\section{Propriedades dos Fluidos}
+
+\subsection{Pressão}
+
+A pressão (\( p \)) é outra propriedade importante dos fluidos. Ela é definida como a força \( F \) exercida perpendicularmente por unidade de área \( A \):
+\begin{equation*}
+    p = \frac{F}{A}
+\end{equation*}
+
+A pressão é uma grandeza escalar, o que significa que ela não possui direção, mas sim um valor em cada ponto do fluido. Quando consideramos um fluido em equilíbrio, a pressão exerce-se igualmente em todas as direções (um princípio fundamental descrito por Pascal).
+
+\section{Estática dos Fluidos}
+
+Hidrostática é o ramo da Física que estuda o comportamento dos fluidos em repouso, analisando como propriedades como a pressão variam com a profundidade, e das forças exercidas pelos fluidos sobre superfícies imersas e recipientes.
+
+\subsection{Lei de Stevin}
+
+Considerando um fluido incompressível com densidade constante \( \rho \) e sujeito à aceleração gravítica \( g \), numa coluna vertical de altura \( z \) e área de secção transversal \( A \). A pressão \( p \) em qualquer ponto dentro desta coluna é a soma da pressão atmosférica \( p_0 \) e a pressão exercida pelo peso do fluido acima desse ponto.
+
+O peso \( F \) da coluna de fluido é dado por:
+
+\begin{equation*}
+    F = m g = \rho g V = \rho g A z
+\end{equation*}
+
+A pressão \( p \) da coluna de fluido é dada por:
+
+\begin{equation*}
+    p = \frac{F}{A} = \frac{\rho g A z}{A} = \rho g z
+\end{equation*}
+
+Então, a pressão total é dado pela \textbf{Lei de Stevin}:
+
+\begin{equation}
+    p(z) = p_0 + \rho g z
+\end{equation}
+
+Como esperado, a pressão aumenta com a profundidade, já que o peso da coluna de fluido acima de um determinado ponto aumenta à medida que a profundidade aumenta. Além disso, sabemos que a pressão é também diretamente proporcional à densidade do fluido, à aceleração gravítica.
+
+\begin{historybox}[O Barril de Pascal]
+
+Blaise Pascal demonstrou, no século XVII, que a pressão em um fluido transmite-se igualmente em todas as direções. Na famosa experiência do barril, ele ligou um tubo vertical fino a um barril cheio de água. Ao adicionar água ao tubo, a pressão no fundo do barril aumentou a ponto de este explodir, mesmo com uma pequena quantidade de água extra. Esta experiência ilustra a lei de Stevin e a transmissão de pressões.
+
+\end{historybox}
+
+
+\section{Dinâmica dos Fluidos}
+
+\subsection{Equação da Continuidade}
+
+Ao acompanharmos um elemento material de fluido ao longo de um escoamento unidimensional, sabemos pelo princípio da conservação da massa, que em dois pontos do escoamento: $d m_1 = d m_2$, podendo, no entanto, o seu volume variar em regiões com diferentes densidades.
+
+Em regime estacionário, onde as propriedades de um fluido não variam ao longo do tempo ($\frac{\partial \rho}{\partial t} = 0$ e $\frac{\partial \mathbf{v}}{\partial t} = 0$), sabendo que $dm = \rho \,dV$, temos que $\rho_1 dV_1 = \rho_2 dV_2$. Como num fluido unidimensional $dV = A dx$, obtemos $\rho_1 A_1 dx_1 = \rho_2 A_2 dx_2 \Longleftrightarrow \rho_1 A_1 \mathbf{v}_1 dt = \rho_2 A_2 \mathbf{v}_2 dt$, dado que $dx = \mathbf{v} \, dt$.
+
+Desta forma, chegamos à equação da continuidade:
+
+\begin{equation}
+    \rho_1 A_1 \mathbf{v}_1= \rho_2 A_2 \mathbf{v}_2
+\end{equation}
+
+Para fluidos incompressíveis, $\rho = \text{const.}$:
+
+\begin{equation}
+    A_1 \mathbf{v}_1= A_2 \mathbf{v}_2
+\end{equation}
+
+Esta relação permite compreender que, por exemplo, num afunilamento do escoamento — como numa mangueira de jardim ou num bocal convergente —, se $A_2 < A_1$, então necessariamente $\mathbf{v}_2 > \mathbf{v}_1$.
+
+Assim, a equação da continuidade exprime o princípio da \textbf{conservação da massa} no escoamento de um fluido. Na forma diferencial geral, válida para escoamentos compressíveis ou incompressíveis, é escrita como:
+
+\begin{equation}
+    \frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \vec{\mathbf{v}}) = 0
+\end{equation}
+
+Esta equação indica que a variação temporal da densidade \(\rho\) num ponto é oposta à divergência do fluxo de massa nesse ponto:
+
+\begin{equation} \notag
+    \frac{\partial \rho}{\partial t} = - \nabla \cdot (\rho \vec{\mathbf{v}})
+\end{equation} 
+
+\begin{itemize}
+    \item Se \(\nabla \cdot (\rho \vec{\mathbf{v}}) > 0\), sai mais fluido do que entra, e a densidade local diminui.
+    \item Se \(\nabla \cdot (\rho \vec{\mathbf{v}}) < 0\), entra mais fluido do que sai, e a densidade local aumenta.
+\end{itemize}
+
+Para um fluido incompressível, a equação da continuidade reduz-se a:
+\begin{equation*}
+    \nabla \cdot \vec{\mathbf{v}} = 0
+\end{equation*}
+Fisicamente, isto significa que o volume de fluido que entra numa região é igual ao volume que sai dessa mesma região.
+
+
+\subsection{Equação de Bernoulli}
+
+A equação de Bernoulli descreve a conservação de energia ao longo de uma linha de corrente. Esta equação é derivada a partir da equação de Euler para escoamentos invíscidos (sem efeitos viscosos), estacionários e incompressíveis. Em escoamentos viscosos, há dissipação de energia devido ao atrito viscoso.
+
+Considere duas secções transversais de um escoamento, nos pontos 1 e 2, com áreas \(A_1\) e \(A_2\), situadas a alturas \(z_1\) e \(z_2\) e sujeitas a pressões \(p_1\) e \(p_2\). Segue-se um elemento de volume \(dV\) que se desloca entre esses dois pontos num intervalo de tempo \(dt\), assumindo fluido incompressível. Sabemos que \(dV = A_1 dx_1 = A_2 dx_2\) e, pela equação da continuidade, \(A_1 \mathbf{v}_1 = A_2 \mathbf{v}_2\).
+
+O trabalho das forças de pressão sobre o elemento de volume é dado por:
+\begin{align*}
+    W_p & = F_1 dx_1 - F_2 dx_2 \\
+    & = p_1 A_1 dx_1 - p_2 A_2 dx_2 = (p_1 - p_2) dV
+\end{align*}
+
+O trabalho realizado pela força da gravidade sobre o elemento é igual ao simétrico da variação da energia potencial gravitacional:
+
+\begin{align*}
+    W_g &= - m g \Delta z \\
+    &= - \rho g (z_2 - z_1) dV
+\end{align*}
+
+A variação da energia cinética do elemento de volume é:
+\begin{equation*}
+    \Delta E_c = \frac{1}{2} \rho dV (\mathbf{v}_2^2 - \mathbf{v}_1^2)
+\end{equation*}
+
+Assim, pela conservação da energia mecânica para o elemento de fluido, temos: $W_p + W_g = \Delta E_c$
+
+\begin{equation*}
+    (p_1 - p_2) dV - \rho g (z_2 - z_1) dV = \frac{1}{2} \rho dV (\mathbf{v}_2^2 - \mathbf{v}_1^2)
+\end{equation*}
+
+Ou seja, rearranjando os termos:
+
+\begin{equation}
+    p_1 + \frac{1}{2} \rho \mathbf{v}_1^2 + \rho g z_1 = p_2 + \frac{1}{2} \rho \mathbf{v}_2^2 + \rho g z_2  
+\end{equation}    
+
+ou, genericamente, ao longo da linha de corrente:
+
+\begin{equation}
+    p + \frac{1}{2} \rho \mathbf{v}^2 + \rho g z = \text{const.}
+\end{equation}
+
+Isto implica que, se a velocidade do fluido aumenta, a pressão ou a altura do fluido deve diminuir para que a energia total se mantenha constante.
+
+No caso da asa de um avião, a velocidade do ar sobre o extradorso é maior do que no intradorso, o que resulta numa pressão mais baixa na superfície superior comparativamente à inferior. Este diferencial de pressão gera a força de sustentação que permite o voo.
+
+
+\begin{examplebox}[Limite de succção de bombas centrífugas de água]
+
+As bombas centrífugas de água aceleram o fluido da zona central para a periferia do rotor, onde a área do escoamento diminui, implicando, pela equação da continuidade, um aumento da velocidade (\(A \downarrow \implies \mathbf{v} \uparrow\)). 
+
+Pela equação de Bernoulli, um aumento da velocidade está associado a uma diminuição da pressão (\(\mathbf{v} \uparrow \implies p \downarrow\)), pelo que a bomba cria uma baixa pressão na zona central. 
+
+Esta diferença entre a pressão atmosférica a que a água está sujeita no reservatório (por exemplo, um poço) e a baixa pressão no interior da bomba permite que a água suba pelo tubo até à bomba.
+
+No entanto, existe uma limitação física para a altura máxima da coluna de água que a bomba consegue aspirar, dada por:
+
+\begin{equation*}
+    h = \frac{p_0}{\rho g} = \frac{101325}{1000 \times 9,81} \approx 10{,}3 \; \mathrm{m}
+\end{equation*}
+
+Para atingir essa altura seria necessário criar um vácuo perfeito, algo impossível numa bomba real. Na prática, o limite situa-se em cerca de 7 m, pois a pressão interna não deve ser inferior à pressão de saturação da água, para evitar a vaporização do fluido, fenómeno que pode causar cavitação e danificar a bomba.
+
+Adicionalmente, a bomba converte energia cinética do movimento de rotação em pressão estática, fazendo sair o fluido com elevada pressão e velocidade.
+
+\end{examplebox}
+
+\begin{historybox}[O Tubo de Pitot]
+
+Henri Pitot desenvolveu um dispositivo para medir a velocidade de escoamento com base na equação de Bernoulli. O tubo de Pitot é amplamente utilizado em aeronaves e sistemas de medição de fluidos. O dispositivo mede a diferença de pressão entre a extremidade aberta do tubo ($p_{total}$) e a extremidade da medição ($p_{estatica}$), a partir da qual se pode determinar a velocidade do fluido: $p_{total} = p_{estatica} + \frac{1}{2} \rho \mathbf{v}^2$, pelo que a velocidade é $\mathbf{v} = \sqrt{\frac{2 \Delta p}{\rho}}$.
+
+\end{historybox}
+
+
+\begin{historybox}[Torricelli e o vácuo]
+
+Evangelista Torricelli (1608--1647), físico e matemático italiano, realizou uma experiência fundamental para a termodinâmica, desafiando a visão aristotélica do \textit{horror vacui} — a crença de que o vácuo não podia existir.
+
+Em 1643, Torricelli usou um tubo de vidro com cerca de 1 metro, fechado numa extremidade, que encheu com mercúrio (devido à sua elevada densidade). Tapou a extremidade aberta com o dedo, inverteu o tubo e mergulhou-o numa tina com mercúrio. Ao retirar o dedo, o mercúrio desceu mas estabilizou a cerca de 760 mm acima do nível da tina, criando no topo do tubo o \textbf{vácuo torricelliano}.
+
+Torricelli concluiu que o mercúrio era sustentado pela pressão atmosférica sobre o líquido na tina, afirmando:
+
+\begin{quote}
+    ``Vivemos submersos no fundo de um oceano do elemento ar, que por experiências inquestionáveis se sabe ter peso.''
+\end{quote}
+
+
+Esta descoberta criou o primeiro barômetro, permitindo a medição da pressão atmosférica.
+\begin{equation*}
+    p_{atm} = \rho_{Hg} \, g \, h
+\end{equation*}
+
+A altura da coluna de mercúrio na experiência de Torricelli pode ser calculada, sabendo a densidade do mercúrio $\rho_{Hg} = 13595.1~\text{kg/m}^3$ (a 0\textdegree C).
+
+\begin{equation*}
+    h = \frac{101325~\text{Pa}}{13595.1~\text{kg/m}^3 \cdot 9.80665~\text{m/s}^2} \approx 0.76~\text{m} = 760~\text{mm}
+\end{equation*}
+Esta altura de 760 mm de mercúrio tornou-se a definição da unidade de pressão \textbf{milímetros de mercúrio} (mmHg) ($1~\text{atm} = 101325~\text{Pa} = 760~\text{mmHg}$).
+
+\textbf{Blaise Pascal} estendeu o trabalho de Torricelli, demonstrando que a pressão atmosférica diminui com a altitude. Para isso pediu ao cunhado \textbf{Florin Périer} para medir a pressão atmosférica a diferentes altitudes no Puy de Dôme em 1648, com uma coluna de mercúrio. Uma coluna de água seria impraticável, pois exigiria cerca de $10.3~\text{m}$ de altura.
+
+\end{historybox}
+
+\begin{historybox}[Otto von Guericke e a força do vácuo]
+
+Inspirado por Torricelli, \textbf{Otto von Guericke}, um cientista alemão dedicou-se a investigar o vácuo. Em 1649, Otto von Guericke desenvolveu a primeira bomba de vácuo, um dispositivo capaz de extrair ar de um recipiente selado, criando um vácuo parcial. 
+
+Para demonstrar o poder do vácuo e a força da pressão atmosférica, Guericke realizou, em 1654, a célebre experiência dos Hemisférios de Magdeburgo. Nela, duas semiesferas de cobre com 20 polegadas, cerca de 50 cm, de diâmetro foram unidas e o ar do interior foi removido com a bomba. A pressão atmosférica externa tornou impossível separá-las. Numa demonstração pública em Regensburg, diante do Imperador Fernando III, duas equipas com oito cavalos cada tentaram — sem sucesso — separar os hemisférios.
+
+\end{historybox}
+
+\subsection{Equação de Navier-Stokes}
+
+A equação de Navier-Stokes descreve o movimento de fluidos viscosos e é a equação fundamental para os fluidos não ideais. Ela é dada por:
+\begin{equation}
+    \rho \left( \frac{\partial \vec{\mathbf{v}}}{\partial t} + (\vec{\mathbf{v}} \cdot \nabla) \vec{\mathbf{v}} \right) = -\nabla p + \mu \nabla^2 \vec{\mathbf{v}} + \vec{f}
+\end{equation}
+
+onde \( \vec{f} \) representa as forças externas (como a gravidade).
+
+Esta equação é derivada das leis de Newton e expressa o equilíbrio entre a inércia, as forças de pressão, as forças viscosas e as forças externas. Resolver as equações de Navier-Stokes é um dos maiores desafios na física e na matemática, sendo parte dos Problemas do Prêmio Millennium do Clay Institute.
+
+Desprezando o termo viscoso (\(\mu = 0\)), obtém-se a equação de Euler:
+
+\begin{equation}
+    \rho \left( \frac{\partial \vec{\mathbf{v}}}{\partial t} + (\vec{\mathbf{v}} \cdot \nabla) \vec{\mathbf{v}} \right) = -\nabla p + \vec{f}
+\end{equation}
+
+Supondo escoamento incompressível e estacionário (\(\partial/\partial t = 0\)) e tomando \(\vec{f} = \rho \vec{g}\), pode-se obter, novamente, a equação de Bernoulli:
+
+\begin{equation*}
+    \rho (\vec{\mathbf{v}} \cdot \nabla) \vec{\mathbf{v}} = -\nabla p + \rho \vec{g}
+\end{equation*}
+
+Projectando ao longo de um deslocamento infinitesimal \(d\vec{s}\), para a linha de corrente:
+
+\begin{eqnarray*}
+    \rho \vec{\mathbf{v}} \cdot d\vec{\mathbf{v}} = -dp + \rho \vec{g} \cdot d\vec{s} \\
+    \rho d \left(\frac{\mathbf{v}^2}{2}\right) = -dp - \rho g dz \\
+    d \left( p + \frac{1}{2} \rho \mathbf{v}^2 + \rho g z \right) = 0
+\end{eqnarray*}
