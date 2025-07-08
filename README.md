@@ -73,11 +73,11 @@ pdflatex main.tex
 
 ## 📌 Propostas de Continuidade
 
-- Gráficos da eficiência do Ciclo de Brayton com a pressão;
+- Gráficos da eficiência do Ciclo de Brayton em função da razão de pressão;
 - Gráficos do trabalho específico útil em função da razão de pressão (para encontrar razão de pressão ótima: 7.4.1 Trabalho máximo);
 - Ciclos de Rankine com reaquecimento;
 - Ciclos combinados;  
-- Exercícios resolvidos relevantes 
+- Exercícios resolvidos relevantes.
 
 
 ## Contribuições
